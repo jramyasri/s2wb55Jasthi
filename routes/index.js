@@ -1,14 +1,9 @@
-extends layout
+var express = require('express');
+var router = express.Router();
 
-block content
-  h1= title
-  p Getting familiar with pug #{title}
-  button(type="button", class="btn btn-primary", onclick="moreClaps()") Press Me
-  p 
-  div(id="target") Clap for me 
-  script. 
-    var clap_count=0;
-    function moreClaps(){
-      clap_count+=1;
-      document.getElementById("target").innerHTML="Value is "+clap_count  ;
-    }
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
