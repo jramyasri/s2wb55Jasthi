@@ -28,6 +28,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/organization', organizationRouter);
 app.use('/addmods', addmodsRouter);
+app.use('/selector', selectorRouter);
+
 
 
 
